@@ -24,7 +24,7 @@ def fetch_trials(query):
         if page_token:
             params["pageToken"] = page_token
 
-        attempt = 1
+        attempt = 0
 
         try:
             r = requests.get(BASE_URL, params=params, timeout=30)
@@ -48,10 +48,12 @@ def fetch_trials(query):
         except requests.exceptions.Timeout:
             print(f"Attempt {attempt + 1} timed out. Retrying...")
             time.sleep(2)  # Wait 2 seconds before trying again
+            attempt += 1
 
         except requests.exceptions.ConnectionError:
             print(f"Attempt {attempt + 1} failed due to connection error. Retrying...")
             time.sleep(2)
+            attempt += 1
 
         if attempt > 4:
             raise Exception("ClinicalTrials.gov API failed to respond after multiple attempts.")
