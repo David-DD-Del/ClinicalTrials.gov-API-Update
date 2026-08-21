@@ -17,6 +17,15 @@ seed_terms = [
 ]
 
 if __name__ == "__main__":
+    print("Do you want to update all CSV files or just the main one?")
+    while True:
+        update = input("Please type 'all' or 'one': ")
+        update = update.lower().strip()
+        if update == "all" or update == "one":
+            break
+        else:
+            print("I didn't get that, please try again.\n")
+
     # Runs our pipeline.
     dataf = {}
     for term in seed_terms:
@@ -50,15 +59,23 @@ if __name__ == "__main__":
     # Sort from highest amount of duplicates to lowest
     duplicate_counts = duplicate_counts.sort_values(by='duplicate_count', ascending=False)
 
-    print("Current duplicate trials per term")
+    print("Current duplicate trials per term:")
     print(duplicate_counts)
 
-    # create updated mesh_mapping CSV file
-    mesh_mapping.mesh_mapping(master_df)
+    if update == 'all':
+        # create updated mesh_mapping CSV file
+        mesh_mapping.mesh_mapping(master_df)
 
-    # create scoring CSV and add global counts for early active trials to master df
-    master_df = scoring.scoring_system(master_df)
+        # create scoring CSV and add global counts for early active trials to master df
+        master_df = scoring.scoring_system(master_df)
 
-    # create updated  all diseases csv file
-    master_df.to_csv('all_diseases.csv', index=False)
-    print("Created CSV file containing all trials with filename: all_diseases.csv")
+        # create updated  all diseases csv file
+        master_df.to_csv('all_diseases.csv', index=False)
+        print("Created CSV file containing all trials with filename: all_diseases.csv")
+    elif update == 'one':
+        # create updated  all diseases csv file
+        master_df.to_csv('all_diseases.csv', index=False)
+        print("Created CSV file containing all trials with filename: all_diseases.csv")
+    else:
+        print("Something went wrong. Please rerun the program.")
+
