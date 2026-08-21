@@ -1,0 +1,25 @@
+name = "Clinical Trials API Update"
+
+# pyscript.toml
+
+# 1. Define the packages your Python scripts need to run
+# Note: 'requests' and 'urllib3' are intentionally excluded as they are incompatible with PyScript
+packages = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "tqdm"
+]
+
+# 2. Fetch all required local files and load them into the browser's virtual memory
+[[fetch]]
+files = [
+    "./main.py",
+    "./api_call.py",
+    "./disease_filter.py",
+    "./sponsor_norm.py",
+    "./mesh_mapping.py",
+    "./scoring.py",
+    "./industry_norm_final.csv", 
+    "./browser_download.py"
+]
