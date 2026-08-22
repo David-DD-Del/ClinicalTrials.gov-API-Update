@@ -54,7 +54,7 @@ After combining the datasets from all seed terms:
 
 - **Cardiovascular Specific Filter**: A broad filter is applied to Cardiovascular Diseases by excluding any trial that contains any of the below indications in it's MeSH terms column.
 	<details>
-	<summary>Cardiovascular Broad Filters</summary>
+	<summary>Cardiovascular Broad Filters (Click the arrow to view)</summary>
 
 	**Hematologic & Blood Protein:**  
 	Hemostatic Disorders, Blood Protein Disorders, Cryoglobulinemia, Disseminated Intravascular Coagulation, Purpura, Purpura, Thrombocytopenic, Purpura, Hyperglobulinemic, Shwartzman Phenomenon, Angioedemas, Hereditary, Hemorrhoids  
@@ -75,7 +75,7 @@ After combining the datasets from all seed terms:
     
 - **Narrow Indication Filter**: Ran across the concatenated DataFrame to remove crossover/non-relevant trials by filtering if a single specific MeSH term is present per seed term indication.
 	<details>
-	<summary>Narrow Filters</summary>
+	<summary>Narrow Filters (Click the arrow to view)</summary>
 	
 	**Cardiovascular Diseases:**
 	Diabetes Mellitus, Type 2, Renal Insufficiency, Chronic, Obesity, Diabetes Mellitus, Overweight, COVID-19
