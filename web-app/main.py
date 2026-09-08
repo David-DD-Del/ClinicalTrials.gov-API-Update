@@ -24,7 +24,7 @@ async def main():
 
     while True:
         # 2. Swap standard input() for js.prompt()
-        update = js.prompt("Do you want to update all CSV files or just the main one?\nPlease type 'all' or 'one': ")
+        update = js.prompt("Do you want to update all CSV files or just the main CSV file (all_diseases.csv)?\nPlease type 'all' or 'one': ")
         
         # 3. Handle the case where a user clicks "Cancel" on the popup
         if update == jsnull or update is None:
