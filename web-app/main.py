@@ -27,7 +27,7 @@ async def main():
         update = js.prompt("Do you want to update all CSV files or just the main one?\nPlease type 'all' or 'one': ")
         
         # 3. Handle the case where a user clicks "Cancel" on the popup
-        if update is None:
+        if update == jsnull or update is None:
             print("Operation cancelled by user.\n Refresh this page to rerun the program.")
             return # Safely exit the pipeline
             
