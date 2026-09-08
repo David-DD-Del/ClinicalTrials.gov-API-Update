@@ -18,7 +18,7 @@ seed_terms = [
 ]
 
 if __name__ == "__main__":
-    print("Do you want to update all CSV files or just the main one?")
+    print("Do you want to update all CSV files or just the main CSV file (all_diseases.csv)?")
     while True:
         update = input("Please type 'all' or 'one': ")
         update = update.lower().strip()
