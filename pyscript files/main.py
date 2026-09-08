@@ -7,6 +7,7 @@ import sponsor_norm
 import mesh_mapping
 import scoring
 import browser_download
+from pyodide.ffi import jsnull
 
 # search terms
 seed_terms = [
@@ -27,7 +28,7 @@ async def main():
         
         # 3. Handle the case where a user clicks "Cancel" on the popup
         if update is None:
-            print("Operation cancelled by user.")
+            print("Operation cancelled by user.\n Refresh this page to rerun the program.")
             return # Safely exit the pipeline
             
         update = update.lower().strip()
