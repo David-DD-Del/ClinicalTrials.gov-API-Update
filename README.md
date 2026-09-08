@@ -12,12 +12,12 @@
 4. Run `python3 main.py`.  
 	(*Note*: `python3` may be `python` depending on how Python is installed on your OS.)  
 5. The program will ask if you want all the CSV files for Tableau to be updated or just the main CSV containing all the clinical trials.  
-6. The program will proceed to update and overwrite the CSV files in the current folder.
+6. The program will proceed to update and overwrite the CSV files in the data folder.
 ### Python Not Installed
-1. If Python is not installed or you don't want to install Python, you can run the program through your browser of choice.  
-2. You can either [run the program through PyScript here](https://pyscript.com/@jhvzxc/clinical-trials-api-update/) where I already set up an account and public project or create your own [PyScript account](https://pyscript.net/), start a new project and place all files from `pyscript files` folder into the files section.  
-3. Once setup ensure `main.py` is selected from the files section and click `Run` button in the upper middle section.  
-4. A browser popup will ask if you want all the CSV files for Tableau or just the main CSV containing all the clinical trials.  
+1. If Python is not installed or you don't want to install Python, you can run the program through your browser of choice using PyScript.  
+2. Click the link here to run the program: [Python in Browser](https://david-dd-del.github.io/ClinicalTrials.gov-API-Update/web-app/) 
+3. A browser popup will ask if you want all the CSV files for Tableau or just the main CSV containing all the clinical trials.
+   (*Note: It may take some time before the popup shows as the program is setting up*)
 5. The program will proceed to create the CSV files and download them through your browser.  
 
 I'm unsure if PyScript works for all browsers; Google Chrome is recommended.
