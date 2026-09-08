@@ -2,7 +2,7 @@ name = "Clinical Trials API Update"
 
 # pyscript.toml
 
-# 1. Define the packages your Python scripts need to run
+# Define the packages your Python scripts need to run
 # Note: 'requests' and 'urllib3' are intentionally excluded as they are incompatible with PyScript
 packages = [
     "pandas",
@@ -11,7 +11,15 @@ packages = [
     "tqdm"
 ]
 
-# 2. Fetch all required local files and load them into the browser's virtual memory
+# Fetch the industry normalization dataset from the parent directory
+[[fetch]]
+from = "../data"
+to_folder = "data"
+files = [
+    "industry_norm_final.csv",
+]
+
+# Fetch all required local files and load them into the browser's virtual memory
 [[fetch]]
 files = [
     "./main.py",

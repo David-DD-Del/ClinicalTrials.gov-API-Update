@@ -1,4 +1,5 @@
 import pandas as pd
+import data_utils
 
 def mesh_mapping(master_df):
     # Isolate the ID and the mesh_terms
@@ -17,6 +18,6 @@ def mesh_mapping(master_df):
     mesh_mapping['Indication'] = mesh_mapping['Indication'].str.strip()
 
     # Export as a separate mapping table for Tableau
-    mesh_mapping.to_csv('mesh_mapping.csv', index=False)
+    data_utils.save_csv(mesh_mapping, 'mesh_mapping.csv')
 
     print('Mesh mapping CSV created with filename: mesh_mapping.csv', flush=True)

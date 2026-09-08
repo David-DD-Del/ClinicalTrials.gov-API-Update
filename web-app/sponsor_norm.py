@@ -1,6 +1,6 @@
 import pandas as pd
 
-df_comps = pd.read_csv('industry_norm_final.csv')
+df_comps = pd.read_csv('data/industry_norm_final.csv')
 
 def sponsor_norm(master_df):
     """Normalize sponsor names using df_comps, if sponsor is not part of

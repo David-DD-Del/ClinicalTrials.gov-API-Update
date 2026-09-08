@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import requests
+import data_utils
 from tqdm import tqdm
 from sklearn.linear_model import LinearRegression
 
@@ -406,7 +407,7 @@ def scoring_system(master_df):
     score = breadth_scoring(df, score)
     score = final_score(score)
 
-    score.to_csv('weight_scoring.csv', index=False)
+    data_utils.save_csv(score, 'weight_scoring.csv')
     print("Scoring CSV written to: weight_scoring.csv")
 
     return master_df

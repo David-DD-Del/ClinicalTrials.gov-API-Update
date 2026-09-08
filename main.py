@@ -4,6 +4,7 @@ import disease_filter
 import sponsor_norm
 import mesh_mapping
 import scoring
+import data_utils
 
 # search terms
 seed_terms = [
@@ -70,11 +71,11 @@ if __name__ == "__main__":
         master_df = scoring.scoring_system(master_df)
 
         # create updated  all diseases csv file
-        master_df.to_csv('all_diseases.csv', index=False)
+        data_utils.save_csv(master_df, 'all_diseases.csv')
         print("Created CSV file containing all trials with filename: all_diseases.csv")
     elif update == 'one':
         # create updated  all diseases csv file
-        master_df.to_csv('all_diseases.csv', index=False)
+        data_utils.save_csv(master_df, 'all_diseases.csv')
         print("Created CSV file containing all trials with filename: all_diseases.csv")
     else:
         print("Something went wrong. Please rerun the program.")
