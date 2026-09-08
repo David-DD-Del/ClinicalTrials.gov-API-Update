@@ -28,6 +28,5 @@ files = [
     "./sponsor_norm.py",
     "./mesh_mapping.py",
     "./scoring.py",
-    "./industry_norm_final.csv", 
     "./browser_download.py"
 ]
